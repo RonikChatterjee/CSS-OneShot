@@ -1,0 +1,66 @@
+div {
+  height: 100px;
+  width: 300px;
+  text-align: center;
+  background-color: rgb(119, 137, 83);
+  color: black;
+  border: 2px solid black;
+  margin: 30px auto;
+}
+
+div:nth-of-type(2n) {
+  background-color: rgb(170, 165, 95);
+}
+
+div:nth-of-type(3n) {
+  background-color: rgb(186, 149, 135);
+}
+
+/* Transform: This property lets you rotate, scale, skew or translate an element */
+/* (i) transform: rotate(45deg); */
+/* We can rotate the element along with all element and text inside it. Here rotate(45deg) means rotating bay 45deg towards right & rotate(-45deg) means rotating 45deg towards left */
+#one {
+  /* transform: rotate(45deg); */
+  /* transform: rotate(-45deg); */
+  /* transform: rotate(90deg); */
+  transform: rotate(180deg);
+}
+
+/* (ii) transform: scale(0.5); */
+/* It means scaling the element to 0.5 times of its original size along both X & Y axis */
+#two {
+  /* transform: scale(0.5); */
+  /* transform: scale(1.5); */
+  /* transform: scale(
+    0.75,
+    2.4
+  ); */ /* Here 0.75 is for X-axis and 2.4 is for Y-axis */
+  transform: scaleX(0.75);
+  /* transform: scaleY(2.4); */ /* scaleY(2.4) overrides scaleX(0.75) */
+}
+
+/* (iii)transform: translate(50px, 100px); */
+/* It means moving the element 50px towards right and 100px towards bottom */
+#three {
+  /* transform: translate(350px, 25px); */
+  transform: translate(-200px, -25px);
+  /* transform: translateX(200px); */
+  /* transform: translateY(200px); */
+  /* translateY(200px) overrides translateX(200px) */
+}
+
+/* (iv) transform: skew(30deg, 20deg); */
+#four {
+  transform: skew(15deg); /* skew 15 deg along X-axis */
+  /* transform: skew(15deg, 15deg); */
+  /* skew 30 deg along X-axis and 15 deg along Y-axis */
+  /* transform: skewX(15deg); */
+  /* transform: skewY(15deg); */
+  /* translateY(200px) overrides translateX(200px) */
+}
+
+/* More than one transform property can be applied to an element. */
+#five {
+  transform: rotate(45deg) scale(0.5) translate(50px, 250px)
+    skew(15deg, 15deg);
+}

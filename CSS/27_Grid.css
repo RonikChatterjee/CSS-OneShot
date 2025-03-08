@@ -1,0 +1,149 @@
+.container {
+  width: 600px;
+  height: 300px;
+  background-color: black;
+}
+
+.item {
+  height: 25px;
+  width: 50px;
+  background-color: greenyellow;
+  border: 2px solid white;
+  text-align: center;
+}
+
+/* Properties of Grid Model
+--------------------------------GRID MODEL--------------------------------
+Grid Lines: The lines that make up the grid are referred to as grid lines.
+
+        No. of Grid Lines = No. of Grid Tracks + 1
+
+Grid Track: The space between two adjacent grid lines is called a grid track.( It can be horizontal or vertical)
+
+Grid Cell: The space between two adjacent row and two adjacent column grid lines is called a grid cell.
+*/
+.container {
+  display: grid;
+}
+/*
+------------------------------GRID TEMPLATE-------------------------------
+It defines the structure of the grid. It defines the number of grid lines, tracks.
+
+*/
+.container {
+  /* Width of rows(Tracks) */
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  /* Width of columns(Tracks) */
+  /* grid-template-columns: 100px 100px 100px; */
+  /* 3 times auto means 3 columns of equal width. (But does not work always)*/
+  /* grid-template-columns: auto auto auto; */
+  /* Instead of this we use grid-template-column: repeat(count, 1fr) or grid-template-row: repead(count, 1fr) */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* Another way to write this */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*
+--------------------------------------GRID GAP---------------------------------------
+row-gap : It specifies the size of the gap between the rows.
+column-gap : It specifies the size of the gap between the columns.
+grid-gap : It is a shorthand property for the row-gap and column-gap properties. If it contains single value then the same value is for both row-gap and column-gap.
+*/
+.container {
+  /* row-gap: 10px; */
+  /* column-gap: 10px; */
+
+  /*_____ Short Hand ______*/
+  /* row gap 10px & column gap 20px */
+  /* grid-gap: 10px 20px; */
+
+  /* row gap 10px & column gap 10px */
+  grid-gap: 10px;
+}
+
+/*
+--------------------------------------GRID COLUMN---------------------------------------
+It is used by grid items not by grid container.
+grid-column-start: It specifies on which column to start the item.
+grid-column-end: It specifies on which column to end the item.
+grid-column: It is a shorthand property for the grid-column-start, grid-column-end.
+*/
+
+#one {
+  /* grid-column-start: 1; */
+  /* grid-column-end: 3; */
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /* __________SHORT HAND__________ */
+  /* grid-column: col_start / col_end */
+  /* grid-column: 1/3; */
+
+  /* grid-column: col_start / span number of columns */
+  grid-column: 1 / span 2;
+}
+
+/*
+---------------------------------------GRID ROW----------------------------------------
+It is used by grid items not by grid container.
+grid-row-start: It specifies on which row to start the item.
+grid-row-end: It specifies on which row to end the item.
+grid-row: It is a shorthand property for the grid-row-start, grid-row-end, grid-row-gap properties.
+*/
+
+#two {
+  /* grid-row-start: 1; */
+  /* grid-row-end: 3; */
+
+  /* __________SHORT HAND__________ */
+  /* grid-row: row_start / row_end */
+  /* grid-row: 1/3; */
+
+  /* grid-row: row_start / span number of rows */
+  grid-row: 1 / span 2;
+}
+
+/*
+------------------------------SOME OTHER PROPERTIES OF GRID-------------------------------
+justify-items: It aligns all the grid items along the row axis inside the grid container.(It is used by grid container)
+Justify-self: It aligns a perticular grid item along the row axis inside the grid container.(It is used by grid items)
+
+align-items: It aligns all the grid items along the column axis inside the grid container.(It is used by grid container)
+align-self: It aligns a perticular grid item along the column axis inside the grid container.(It is used by grid items)
+
+place-items: It is a shorthand property for the justify-items and align-items properties. If it contains single value then the same value is for both justify-items and align-items.But if it contains two values then the first value is for align-items and the second value is for justify-items.(It is used by grid container)
+
+place-self: It is a shorthand property for the justify-self and align-self properties. If it contains single value then the same value is for both justify-self and align-self.(It is used by grid items)
+*/
+
+.container {
+  /* justify-items: end; */
+  /* align-items: start; */
+  place-items: center;
+  /* place-items: align-items-value justify-items-value; */
+  /* place-items: start end; */
+}
+
+#three {
+  justify-self: start;
+  align-self: end;
+}
+
+#four {
+  /* place-self: align-self-value justify-self-value; */
+  place-self: center end;
+  /* place-self: end; */
+}
+
+/*
+Notes: By default the display: grid works as a block item, But if we want to make it inline item, then we can use display: inline-grid.
+*/
+/* --------------------------------------------------------Z-INDEX-------------------------------------------------------- */
+
+/* z-index: It specifies the stack order of an element when more than one element overlaps. An element with greater stack order is always in front of an element with a lower stack order. By default, all the elements have a stack order of 0. The z-index property can have a negative value. */
+
+/* z-index can be used with the following properties:
+1. position: absolute;
+2. position: relative;
+3. position: fixed;
+4. position: sticky; */

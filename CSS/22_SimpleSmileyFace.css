@@ -1,0 +1,45 @@
+body > div {
+  border: 2px solid black;
+}
+
+div {
+  height: 400px;
+  width: 400px;
+  background-color: aliceblue;
+}
+
+#smiley {
+  height: 100%;
+  width: 100%;
+  background-color: #ffa511;
+  border-radius: 50%;
+  position: relative;
+}
+
+.left-eye,
+.right-eye {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+}
+
+.left-eye {
+  left: 100px;
+}
+
+.right-eye {
+  left: 250px;
+}
+
+#mouth {
+  height: 60px;
+  width: 200px;
+  background-color: brown;
+  border-radius: 0 0 50px 50px;
+  position: absolute;
+  top: 65%;
+  left: 100px;
+}

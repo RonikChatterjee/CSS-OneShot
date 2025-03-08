@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  text-align: center;
+  border: 3px solid black;
+  margin: 20px;
+  display: inline-block;
+}
+
+/* Static Demo */
+/* Static is the default position. top, right, bottom, left & z-index properties have no effect */
+#static {
+  background-color: yellow;
+  position: static;
+  /* Have no effect */
+  /* top: 100px; */
+  /* left: 400px; */
+}
+
+/* Relative Demo */
+/* The offset is relative to itself based on the values of  top, right, bottom & left properties */
+#relative {
+  background-color: red;
+  position: relative;
+  /* 100px towards the bottom & 400px towards the right from its own position */
+  top: 100px;
+  left: 400px;
+}
+
+/* Absolute Demo */
+/* The offset is relative to the nearest positioned(accept static) ancestor & if none, then the offset is relative to the body */
+#outer {
+  background-color: lightblue;
+  /* position: static; */
+  position: relative;
+  /* position: fixed; */
+  /* position: sticky; */
+}
+#absolute {
+  background-color: blue;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+}
+
+/* Fixed Demo */
+/* The offset is relative to the viewport */
+#fixed {
+  background-color: orange;
+  position: fixed;
+  bottom: 100px;
+  left: 400px;
+}
+
+/* Sticky Demo */

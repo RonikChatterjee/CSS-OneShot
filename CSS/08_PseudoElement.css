@@ -1,0 +1,31 @@
+/* Pseudo Element */
+/* A Keyword added to a selector that lets you style a specific part of the selected element(s). */
+/*
+::first-letter -> Selects the first letter of the first line of a block-level element.,
+::first-line -> Selects the first line of a block-level element.,
+::selection -> Selects the portion of an element that is selected by a user.,
+::placeholder -> Selects the placeholder text in an input field.,
+
+
+::marker -> Selects the list item marker of a list element.,
+::backdrop -> The background area behind the element's border.,
+::spelling-error -> The portion of an element that the browser has identified as incorrectly spelled.,
+::before -> Insert content before the content of an element.,
+::after -> Insert content after the content of an element.,
+*/
+h1::first-letter {
+  color: red;
+  font-size: 2em;
+}
+p::first-line {
+  color: blue;
+  font-size: 1.5em;
+}
+*::selection {
+  color: white;
+  background-color: blue;
+}
+h1::after {
+  content: ' - This is a pseudo element';
+  color: red;
+}

@@ -1,0 +1,9 @@
+.box {
+  height: 600px;
+  width: 1200px;
+  margin: 40px auto;
+  background-image: url('https://www.w3schools.com/css/img_lights.jpg');
+  /* background-size: contain; */
+  /* background-size: cover; */
+  background-size: auto;
+}

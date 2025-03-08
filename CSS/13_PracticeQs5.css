@@ -1,0 +1,37 @@
+/* Recreate the following elements using given css: */
+
+/* 1. Create a div & 3 sibling divs inside it */
+
+/* 2. For the outer siv set following  styling: */
+/* height 200px, width 70px & border as 2px solid black color */
+.outer {
+  width: 70px;
+  height: 200px;
+  border: 2px solid black;
+}
+/* 3. For the inner divs set following styling */
+/* height 50px, width 50px & border as 2px solid black color
+also set a margin of 10px */
+/* make inner divs circular in shape & given them individual colors (red, yellow & green) */
+
+.inner {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+#red {
+  background-color: red;
+  border-radius: 50%;
+}
+
+#yellow {
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+#green {
+  background-color: green;
+  border-radius: 50%;
+}

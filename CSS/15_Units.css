@@ -1,0 +1,45 @@
+h1 {
+  /* occupies 33.33% of the width of its immediate parent */
+  width: 33.33%;
+  border: 2px solid black;
+  background-color: rgb(131, 210, 236);
+}
+
+/* Em is use to set font-size relative to parent's font-size, whereas for other properties like margin, padding, width, height, etc. it is relative to the font-size of the element itself. */
+
+#outer {
+  height: 300px;
+  width: 200px;
+  background-color: pink;
+  /* position: relative; */
+  /* border: 2px solid black; */
+  margin: 50px;
+  font-size: 20px;
+}
+
+#inner {
+  /* height: 100px; */
+  height: 3em; /* 3 * (1.5 * 20px) (relative to th font-size of itself) = 90px */
+  /* width: 100px; */
+  width: 3em;
+  background-color: cornflowerblue;
+  border: 2px solid black;
+  /* position: absolute; */
+  /* Here the margin is 10% of the width of the immediate parent element */
+  margin: 20px;
+  /* top: 10%; */
+  /* left: 10%; */
+  /* ---------------------- Using Em --------------------- */
+  /*font-size: 1.5em;*/ /* 1.5 * 20px (relative to parent font-size) = 30px */
+  /* margin: 1em;*/ /* 1 * 30px (relative to font-size of itself) = 30px */
+  padding: 0.5em; /* 0.5 * 30px (relative to font-size of itself) = 15px */
+  /* --------------------- Using rem -------------------- */
+  /* It is same as en but it is relative to the font-size of the root element (html element) */
+}
+
+/* Demonstrating snowballing effect which is drawback of em */
+div {
+  /* border: 2px solid black; */
+  font-size: 2em;
+  /* Here if the font-size was written in rem then the font-size of all the nested divs would have been 2 times of the root element (here which is section) instead of being 2 times of the immediate parent element. */
+}

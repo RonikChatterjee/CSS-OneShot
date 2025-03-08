@@ -1,0 +1,56 @@
+/* Properties in Box Model */
+div {
+  /*-------------------- Height and Width ---------------------*/
+  width: 500px;
+  height: 200px;
+  background-color: pink;
+
+  /*------------------- border: border; ----------------------*/
+  /* border-width: 5px; */
+  /* border-style: double; */
+  /* border-color: red; */
+  border: 5px double red; /* border short hand */
+  /* left, right, top & bottom borders can be specifically targeted */
+  border-left-color: blue;
+  border-left-style: dotted;
+  border-left-width: 5px;
+
+  /*------------------- Border-Radius -----------------------*/
+  border-radius: 20px;
+  /* border-top-left-radius: 10px; */
+  /* border-top-right-radius: 25px; */
+  /* border-bottom-left-radius: 40px; */
+  /* border-bottom-right-radius: 55px; */
+  /*--- short-hand ---*/
+  /* border-radius: 20px 60px; */ /* top-left & bottom-right | top-right & bottom-left */
+  /* border-radius: 0px 30px 60px; */ /* top-left | top-right & bottom-left | bottom-right */
+  /* border-radius: 0px 20px 40px 60px; */ /* top-left, top-right, bottom-right, bottom-left */
+
+  /*------------------------ Padding ------------------------*/
+  padding: 20px;
+  /* padding-left: 0px; */
+  /* padding-right: 20px; */
+  /* padding-top: 40px; */
+  /* padding-bottom: 60px; */
+  /*--- Short-Hand ---*/
+  /* padding: 20px 60px; */ /* top & bottom | left & right */
+  /* padding: 0px 30px 60px; */ /* top | left & right | bottom */
+  /* padding: 0px 20px 40px 60px; */ /* top, right, bottom, left */
+
+  /*_________________________ Margin _________________________*/
+  margin: 50px;
+  /* margin-left: 0px; */
+  /* margin-right: 20px; */
+  /* margin-top: 40px; */
+  /* margin-bottom: 60px; */
+  /*--- Short-Hand ---*/
+  /* margin: 20px 60px; */ /* top & bottom | left & right */
+  /* margin: 0px 30px 60px; */ /* top | left & right | bottom */
+  /* margin: 0px 20px 40px 60px; */ /* top, right, bottom, left */
+}
+h1 {
+  border: 5px dashed green; /* border short hand */
+  /* H tags are given default margin by the browser */
+  /*--- To remove the default margin ---*/
+  margin: 0px;
+}

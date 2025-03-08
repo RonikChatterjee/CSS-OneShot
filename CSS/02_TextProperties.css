@@ -1,0 +1,58 @@
+/* Text Properties */
+/* text-align : used to align the text according to its immediate parent */
+/* text-align: left/start; -> The text starts from the left of the parent element.
+text-align: right/end; -> The text starts from the right of the parent element.
+text-align: center; -> The text is centered in the parent element.
+text-align: justify; -> It increases the space between words so that both the left and right edges are aligned(horizontal alignment).
+*/
+
+/* font-weight: used to control the boldness or lightness of the font. Its value ranges from 100 to 900.
+(400 is normal)
+(700 is bold)
+(bolder: makes the text bolder than the parent element)
+(lighter: makes the text lighter than the parent element)
+*/
+
+/* text-decoration: sets the appearance of decorative lines on text like underline.
+text-decoration: underline; -> It underlines the text.
+text-decoration-color: red; or text-decoration: red underline; -> It underlines the text with red color.
+
+text-decoration: overline; -> It overline the text.
+text-decoration-style: dotted; -> It sets the style of the line.
+also written as text-decoration: dotted blue underline;(solid, dashed, dotted, wavy, double)
+
+text-decoration: line-through; -> It draws a line through the text.
+text decoration: none; -> It removes the decoration from the text with was there by default;
+*/
+
+/* line-height: Controls the height of the line of the text.
+line-heights: normal; -> It sets the normal line height.
+line-height: 1.5; -> It sets the line height to 1.5 times the height of the font.
+*/
+
+/* letter-spacing: It controls the horizontal spacing behavior between text characters.
+letter-spacing: normal;
+letter-spacing: 10px; -> It sets the space between the characters to 10px.
+*/
+
+/*
+font-size: It sets the size of the font.(absolute units & relative units)
+
+Absolute units: Units that does not change with the size of the parent element. e.g. px, pt, pc, cm, mm, in
+
+Relative units: Units that change with the size of the parent element. e.g. %, em, rem, ch, vh, vw, vmin, vmax
+*/
+
+/* font-family: It prioritizes list of one or more font family names. refer to "cssfontstack.com"
+font-family: Arial, sans-serif; -> It sets the font family to Arial. If Arial is not available, it uses the default sans-serif font. (We can mention a list of font families separated by commas.)
+*/
+
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: left;
+}
+h3 {
+  text-align: right;
+}

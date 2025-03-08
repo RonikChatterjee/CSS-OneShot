@@ -1,0 +1,53 @@
+div {
+  width: 300px;
+  height: 100px;
+  border: 2px solid black;
+  background-color: lightcoral;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* RGBA & OPACITY */
+.opaque {
+  background-color: aqua;
+  /* In rgba a stands for alpha which is the opacity of the color(ranges from 0 to 1). It affects only the color, nothing else
+  0 -> means the visibility of color is 0(invisible).
+  1 -> means the visibility of color is 1(visible). */
+  /* background-color: rgba(255, 0, 0, 0.5); */
+
+  /* It is same as a(alpha) of rgba but it affects the whole element instead of just the color. */
+  opacity: 0.25;
+}
+
+/* Transition: */
+/* It enables you to define the transition between teo states of an element. */
+/* transition: property, duration, timing-function, delay; */
+.box {
+  height: 300px;
+  /* transition-property: border-radius;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s; */
+
+  /* Transition-Shorthand */
+  transition: border-radius 1s ease-in-out 0.5s; /* property duration timing-function delay */
+}
+
+.box:hover {
+  border-radius: 50%;
+}
+/* Keyword values */
+/* transition-timing-function: ease; */
+/* transition-timing-function: ease-in; */
+/* transition-timing-function: ease-out; */
+/* transition-timing-function: ease-in-out; */
+/* transition-timing-function: linear; */
+/* transition-timing-function: step-start; */
+/* transition-timing-function: step-end; */
+
+/* Global values */
+/* transition-timing-function: inherit; */
+/* transition-timing-function: initial; */
+/* transition-timing-function: revert; */
+/* transition-timing-function: revert-layer; */
+/* transition-timing-function: unset; */

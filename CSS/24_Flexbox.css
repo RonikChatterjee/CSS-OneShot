@@ -1,0 +1,168 @@
+.container {
+  display: flex;
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: azure;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: 3px underline double black;
+}
+
+.container div {
+  height: 100px;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: aliceblue;
+  text-align: center;
+  /* transform: rotate(-90deg); */
+}
+
+#violet {
+  background-color: violet;
+}
+#indigo {
+  background-color: indigo;
+}
+#blue {
+  background-color: blue;
+}
+#green {
+  background-color: green;
+}
+#yellow {
+  background-color: yellow;
+  color: black;
+}
+#orange {
+  background-color: orange;
+  /* height: 300px; */
+  /* width: 300px; */
+  /* font-size: 2.5rem; */
+}
+#red {
+  background-color: red;
+}
+/* Flexbox limit all the items inside it(flex-items) to be inside the flex container(stops them from overflowing) */
+
+/************************* Flex Properties **************************/
+
+/*------------------------ Flex-Direction --------------------------*/
+/* It sets how flex items are placed in the flex container, along which axis & direction */
+
+/* flex-direction: row; -> main axis, left to right */
+/* flex-direction: row-reverse; -> main axis, right to left */
+/* flex-direction: column; -> main axis, top to bottom */
+/* flex-direction: column-reverse; -> main axis, bottom to top */
+
+.container {
+  flex-direction: row;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+}
+
+/*----------------------- Justify-Content --------------------------*/
+/* It aligns flex items along the main axis */
+
+/* Justify-Content: flex-start -> default, items are packed at the start of the main axis */
+/* Justify-Content: flex-end -> items are packed at the end of the main axis */
+/* Justify-Content: center -> items are packed at the center of the main axis */
+/* Justify-Content: space-between -> items are evenly distributed in the main axis, with the first item at the start(no gap before first item) and the last item at the end(no gap after last item). */
+/* Justify-Content: space-around -> items are evenly distributed in the main axis, with equal space around them, only half space before first item and after last item. */
+/* Justify-Content: space-evenly -> items are evenly distributed in the main axis, with equal space around them, including before first item & last item. */
+
+.container {
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  justify-content: center;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+}
+
+/*--------------------------- Flex Wrap ----------------------------*/
+/* It defines whether the flex items are forced in a single line or can be wrapped on multiple lines */
+
+/* flex-wrap: nowrap; -> default, all flex items are on one line */
+/* flex-wrap: wrap; -> flex items are wrapped onto multiple lines, from top to bottom (row is the main axis) */
+/* flex-wrap: wrap-reverse; -> flex items are wrapped onto multiple lines, from bottom to top(along cross axis) (row is the main axis) */
+
+.container {
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
+}
+
+/*------------------------ Align-Items -----------------------------*/
+/* It aligns flex items along the cross axis */
+
+/* align-items: stretch -> default, stretch to fill the container */
+/* align-items: flex-start -> items are packed at the start of the cross axis */
+/* align-items: flex-end -> items are packed at the end of the cross axis */
+/* align-items: center -> items are packed at the center of the cross axis */
+/* align-items: baseline -> items are aligned such as their baselines of text align */
+
+/* .container { */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  /* align-items: baseline; */ /* generally used when horizontal axis is the main axis */
+/* } */
+
+/*------------------------ Align-Content ---------------------------*/
+/* It aligns a flex container's lines within when there is extra space in the cross axis (When there are multiple lines in cross axis)*/
+
+/* align-content: stretch -> default, lines stretch to take up the remaining space */
+/* align-content: flex-start -> lines are packed at the start of the cross axis */
+/* align-content: flex-end -> lines are packed at the end of the cross axis */
+/* align-content: center -> lines are packed at the center of the cross axis */
+/* align-content: space-between -> lines are evenly distributed in the cross axis, with the first line at the start(no gap before first line) and the last line at the end(no gap after last line). */
+/* align-content: space-around -> lines are evenly distributed in the cross axis, with equal space around them, only half space before first line and after last line. */
+/* align-content: space-evenly -> lines are evenly distributed in the cross axis, with equal space around them, including before first line & last line. */
+/* align-content: baseline -> lines are aligned such as their baselines of text align */
+
+/* .container { */
+  /* align-content: stretch; */ /* default */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  /* align-content: space-evenly; */
+  /* align-content: baseline; */
+/* } */
+
+/*------------------------ Align-Self ------------------------------*/
+/* Tt is just like align-items, but it applies to individual flex items with in the flex container */
+/* flex-start, flex-end, center are same as self-start, self-end, center */
+/* #violet {
+  align-self: center;
+} */
+/* #indigo {
+  align-self: self-end;
+} */
+/* #red {
+  align-self: center;
+} */
+
+/*------------------------ Flex-Sizing -----------------------------*/
+/* flex-grow: 1; -> default value is 1, it specifies how much a flex item will grow relative to the rest of the flex items. It has no units as it specifies ratio of proportion */
+
+/* flex-shrink: 1; -> default value is 1, it specifies how much a flex item will shrink relative to the rest of the flex items. It has no units as it specifies ratio of proportion */
+
+/* flex-basis: auto; -> default value is auto, it specifies the initial size of a flex item, before remaining space is distributed. It can be in px, %, em, rem, etc. */
+
+/*------- Shorthand property for flex-grow, flex-shrink, flex-basis -------*/
+/* flex: 1 1 auto; -> default value, flex-grow: 1, flex-shrink: 1, flex-basis: auto */
+
+/* flex: 2 200px; -> flex-grow: 2, flex-basis: 200px; */
+
+/* flex: 1; -> flex-grow: 1; */
+/* flex: 200px; -> flex-basis: 200px; */
+
+/* max-width & min-width are used to control the flex-grow and flex-shrink properties */

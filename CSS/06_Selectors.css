@@ -1,0 +1,77 @@
+h1,
+h3 {
+  color: red;
+}
+
+#signup {
+  background-color: red;
+  color: white;
+}
+
+.upvote {
+  background-color: green;
+  color: aliceblue;
+}
+
+/*--------- Descendant Selector -------------*/
+/* It selects all the mentioned element those are descendants of the parent element */
+/* Here we can take descendants up to multiple levels */
+
+/* p a {
+  background-color: yellow;
+} */
+/* It selects all anchor tags inside paragraph, where as we need to exclude the last paragraph and the anchor tag inside it. */
+.post a {
+  background-color: yellow;
+}
+/* up to two levels of descendants */
+/* Here we can take descendants up to multiple levels */
+nav ul li {
+  color: pink;
+}
+/* up to three levels of descendants */
+
+nav ul li a {
+  color: purple;
+}
+/* up to four levels of descendants */
+
+/* ----------- Adjacent Sibling Combinator ------------*/
+/* Basically it indicates the next immediate sibling(adjacent) and represented using '+' symbol */
+
+p + h3 {
+  text-decoration: blue underline;
+}
+.upvote + button {
+  background-color: cornflowerblue;
+}
+
+/* --------------- Child Combinator ------------------ */
+/* It selects all the mentioned element that are direct child of the parent element. It is represented by '>' symbol */
+/* We can move up to one level inside */
+
+div > input {
+  background-color: lightcoral;
+}
+span > button {
+  border-radius: 20%;
+}
+
+/* ---------------- Attribute Selector --------------- */
+/* It selects the element based on the attribute value and also based on the presence of attribute */
+
+/* Based on value of the specified attribute */
+input[type='text'] {
+  color: green;
+  background-color: magenta;
+}
+input[type='password'] {
+  color: red;
+  background-color: cadetblue;
+}
+
+/* Based on the presence of specified attribute */
+input[type] {
+  background-color: ghostwhite;
+}
+/* Explore attribute selector more in the given link:- "https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" */

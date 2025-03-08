@@ -1,0 +1,47 @@
+/* Inheritance in CSS */
+/* It is the mechanism by which the child elements inherit the properties of the parent element. */
+h1 {
+  background-color: rgb(255, 197, 226);
+}
+div {
+  background-color: rgb(255, 255, 177);
+}
+/* All elements inside div has inherited the background color unless the element inside div has their unique background-color */
+h2 {
+  background-color: rgb(189, 255, 233);
+}
+/* Inputs and Buttons does not inherit the properties of the parent element on its own. Explicit declaration is required(background-color: inherit). */
+input {
+  background-color: inherit;
+}
+button {
+  background-color: inherit;
+}
+/* List of properties that can't be inherited bay the child */
+/*
+border
+width
+height
+padding
+margin
+display
+position
+top
+left
+right
+bottom
+float
+clear
+z-index
+overflow
+clip
+visibility
+vertical-align
+cursor
+border-radius
+*/
+
+/* Popular color palettes: */
+/* Coolors:-> https://coolors.co/palettes/trending */
+/* Canva:-> https://www.canva.com/colors/color-palettes/ */
+/* ColorSpace:-> https://mycolor.space/?hex=%23845EC2&sub=1 */

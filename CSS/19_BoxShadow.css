@@ -1,0 +1,13 @@
+.box {
+  height: 100px;
+  width: 250px;
+  background-color: cadetblue;
+  margin: 20px auto;
+  text-align: center;
+  /* box-shadow */
+  box-shadow: 2px 2px 8px 0px black; /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+.box:hover {
+  box-shadow: 2px 2px 28px 2px black;
+}

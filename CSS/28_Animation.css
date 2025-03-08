@@ -1,0 +1,101 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: orange;
+  text-align: center;
+  line-height: 200px;
+  font-weight: 600;
+  font-size: 2rem;
+  box-shadow: 4px 0px 10px 4px rgba(255, 255, 255, 0.6);
+  position: absolute;
+}
+
+/*
+-------------------------------CREATING ANIMATION TEMPLATE------------------------------
+@keyframes animation-name {
+    from {
+        property: value;
+    }
+    to {
+        property: value;
+    }
+}
+@keyframes animation-name {
+    0% {
+        property: value;
+    }
+    50% {
+        property: value;
+    }
+    100% {
+        property: value;
+    }
+}
+*/
+
+@keyframes animateColor {
+  from {
+    background-color: orange;
+  }
+  to {
+    background-color: rgb(255, 81, 0);
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 15%;
+    top: 15%;
+
+  }
+  25% {
+    left: 75%;
+    top: 15%;
+    transform: rotate(90deg);
+  }
+  50% {
+    left: 75%;
+    top: 65%;
+    transform: rotate(180deg);
+  }
+  75% {
+    left: 15%;
+    top: 65%;
+    transform: rotate(270deg);
+  }
+  100% {
+    left: 15%;
+    top: 15%;
+    transform: rotate(360deg);
+  }
+}
+/*
+--------------------------IMPLEMENTING THE ANIMATION ON THE ELEMENT------------------------
+
+animation-name: name;
+animation-duration: time;
+animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n);
+cubic-bezier(n,n,n,n) -> Refer to mdn for more information
+animation-delay: time;
+animation-iteration-count: number of times the animation is applied | infinite;
+animation-direction: normal | reverse | alternate | alternate-reverse;
+
+__________________________SHORT HAND PROPERTY FOR ANIMATION______________________________
+animation: name duration timing-function delay iteration-count direction;
+*/
+
+.box {
+  /* animation-name: animateColor;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+  /* animation: animateColor 2s ease-in 0s infinite alternate; */
+  animation: move 8s ease-in 0s infinite alternate;
+  /* animation: move 0.1s ease-in 0s infinite normal; */
+}

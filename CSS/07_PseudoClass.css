@@ -1,0 +1,66 @@
+#sub {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  margin: 25px;
+  border: none;
+  cursor: pointer;
+}
+button {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px 20px;
+  margin: 25px;
+  border: none;
+  cursor: pointer;
+}
+div {
+  background-color: lightgray;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid black;
+}
+/* A Keyword added to a selector that specifies a special state of the selected element(s). It is written using ':'. */
+
+/* Types of Pseudo classes: */
+/*
+:hover -> It is used to apply styles when the mouse hovers over the element.
+:active -> It is used to apply styles when the element is being activated by the user.
+:checked -> It is used to apply styles to checked elements.
+:nth-of-type(n) -> It is used to apply styles to the nth child of the selected element.
+
+
+:enabled -> It is used to apply styles to enabled elements.
+:disabled -> It is used to apply styles to disabled elements.
+:link -> It is used to apply styles to unvisited links.
+:visited -> It is used to apply styles to visited links.
+:focus -> It is used to apply styles when the element is focused.
+*/
+button:hover {
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+}
+#sub:hover {
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+}
+
+button:active {
+  background-color: black;
+  color: white;
+}
+#sub:active {
+  background-color: darkblue;
+  color: white;
+}
+
+input[type='checkbox']:checked + label {
+  color: green;
+  font-weight: 600;
+}
+
+div:nth-of-type(2n + 1) {
+  background-color: lightseagreen;
+}

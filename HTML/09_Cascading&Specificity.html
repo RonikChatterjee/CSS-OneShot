@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>What is Cascading?</h2>
+    <p>
+        The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS
+        properties. <br>
+        When a same element is declared with multiple CSS declarations, then the last declaration(get priorities) will
+        be applied.
+    </p>
+    <h2>What is Specificity?</h2>
+    <p>
+        Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration.<br>
+        When multiple declarations are applied to the same element, the declaration with the highest specificity will be
+        applied. <br>
+        If the specificity is the same, then the cascading order will be applied.
+    </p>
+    <p>
+        The specificity of a CSS selector is calculated based on the following rules:<br>
+        <b>!important>Inline>Id>Class>Element>Universal</b>
+    <ul>
+        <li>Inline styles have the highest specificity. Specificity of 1, 0, 0, 0</li>
+        <li>ID selectors have a higher specificity than class selectors. Specificity of 0, 1, 0, 0</li>
+        <li>Class selectors have a higher specificity than tag selectors. Specificity of 0, 0, 1, 0</li>
+        <li>Element selector have higher specificity than Universal Selector. Specificity of 0, 0, 0, 1</li>
+        <li>Universal selectors have a specificity of 0, 0, 0, 0.</li>
+    </ul>
+    </p>
+</body>
+
+</html>

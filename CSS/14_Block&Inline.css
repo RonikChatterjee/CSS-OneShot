@@ -1,0 +1,48 @@
+/* In span element height and width does not works */
+/* In span element padding and margin works only horizontally but does not works vertically(overlaps vertically) */
+/* In button element height and width works but does not works as in any other block element*/
+/* In button element padding and margin works as expected(Both horizontally & Vertically) */
+/* In div element height and width works as expected */
+/* In div element padding and margin works as expected(Both horizontally & Vertically) */
+span {
+  /* display: block; */
+  /* background-color: pink; */
+  border: 2px solid black;
+  /* height: 100px; */
+  /* width: 200px; */
+  padding: 50px;
+  /* margin: 50px; */
+}
+
+button {
+  /* display: block; */
+  background-color: pink;
+  border: 2px solid black;
+  /* height: 100px; */
+  /* width: 200px; */
+  /* padding: 50px; */
+  /* margin: 50px; */
+}
+
+/* div {
+  display: inline;
+  background-color: yellow;
+  border: 2px solid black;
+  height: 100px;
+  width: 200px;
+  padding: 50px;
+  margin: 50px;
+} */
+/* When we want a block element to behave like inline element but accepting styles like a block element then we use display="inline-block" */
+div {
+  /* display: inline-block; */
+  background-color: lime;
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+  border: 2px solid black;
+}
+.first,
+.second {
+  display: inline-block;
+}

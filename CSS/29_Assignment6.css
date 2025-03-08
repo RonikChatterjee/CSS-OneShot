@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 10px;
+}
+
+.items {
+  background-color: pink;
+}
+
+#header {
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 1;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  grid-column: 1 / 4; /* grid-column: 1 / span 3; */
+  grid-row: 2 / span 10;
+}
+
+#navigation {
+  grid-column: 4 / span 6;
+  grid-row: 2 / span 1;
+}
+
+#ads {
+  grid-column: 10 / span 3;
+  grid-row: 2 / span 10;
+}
+
+#main {
+  grid-column: 4 / span 6;
+  grid-row: 3 / span 9;
+}
+
+#footer {
+  grid-column: 1 / span 12;
+  grid-row: 12 / span 1;
+}
+
+@media (max-width: 720px) {
+  #navigation {
+    grid-column: 1 / span 12;
+  }
+  #sidebar {
+    grid-row: 3 / span 9;
+  }
+  #main {
+    grid-column: 4 / span 9;
+  }
+  #ads {
+    grid-column: 1 / 4;
+    grid-row: 12 / 13;
+  }
+  #footer {
+    grid-column: 4 / span 9;
+  }
+}
+
+/*------------------------ Loader ----------------------*/
+#sidebar h1 {
+  color: ragb(0, 0, 0);
+  margin-bottom: 10px;
+}
+.loader {
+  border: 20px solid #f3f3f3;
+  border-top: 20px solid goldenrod;
+  border-radius: 100%;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s ease-in-out 0.2s infinite normal;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
